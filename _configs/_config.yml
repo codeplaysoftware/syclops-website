@@ -1,0 +1,29 @@
+# Settings
+title: SYCLOPS - Democratizing AI Acceleration Using Open Standards
+url: '' # Leave this, override in other .yml files
+email: syclops@codeplay.com
+description: Democratizing AI Acceleration Using Open Standards
+
+# Hide on builds
+exclude:
+  - JEKYLL_ENV
+  - README.md
+  - scripts
+  - vendor
+  - CNAME
+  - LICENSE
+  - Gemfile
+  - CODE_OF_CONDUCT.md
+  - .gitignore
+
+# Socials
+twitter: https://twitter.com/syclopseu
+youtube: https://www.youtube.com/@syclopseu
+
+includes_dir: "/"
+
+sass:
+  style: compressed
+
+include:
+  - .htaccess

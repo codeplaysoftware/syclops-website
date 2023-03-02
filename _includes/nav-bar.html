@@ -1,0 +1,23 @@
+<div id="navigation">
+    <input id="navigation-checkbox" type="checkbox" />
+    <div class="logo">
+        <a href="index.html">
+            <img src="static/images/logo.png" alt="SYCLOPS Logo" />
+        </a>
+    </div>
+    <div class="items">
+        <a href="index.html" {% if page.url contains "index.html" or page.url == '/' %} class="selected" {% endif %}>
+        Home</a>
+        <a href="about.html" {% if page.url contains "about.html" %} class="selected" {% endif %}>
+        About</a>
+        <a href="consortium.html" {% if page.url contains "consortium.html" %} class="selected" {% endif %}>
+        Consortium</a>
+        <a href="contact.html" {% if page.url contains "contact.html" %} class="selected" {% endif %}>
+        Contact</a>
+    </div>
+    <div class="burger">
+        <label for="navigation-checkbox">
+            <span class="material-icons">menu</span>
+        </label>
+    </div>
+</div>
