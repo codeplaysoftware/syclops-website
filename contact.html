@@ -36,7 +36,7 @@ layout: page
 
                     <label>Subject</label>
                     <input type="text"
-                           name="subject"
+                           name="query"
                            placeholder="General Question"
                            required />
 
@@ -48,6 +48,7 @@ layout: page
 
                     <button type="submit" disabled>Send Message</button>
 
+                    <input name="subject" type="hidden" value="SYCLOPS Contact Request" />
                     <input type="hidden" name="_next" value="{{page.url}}#sent" />
                 </form>
             </div>
