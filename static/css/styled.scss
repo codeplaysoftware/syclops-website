@@ -226,7 +226,7 @@ body {
                     height: 19px;
                     background-color: #5b40b3;
                     animation: VisorBackgroundFade 1s linear 1;
-                    animation-delay: 6s;
+                    animation-delay: 4s;
                     animation-fill-mode: forwards;
                 }
 
@@ -235,7 +235,7 @@ body {
                     width: 6px;
                     height: 6px;
                     background: radial-gradient(circle, rgba(243,90,28,1) 52%, rgba(0,34,111,1) 100%);
-                    animation: VisorSwipe 2s linear 3;
+                    animation: VisorSwipe 2s linear 2;
                     animation-direction: alternate;
                 }
 
