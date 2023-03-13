@@ -440,22 +440,37 @@ body {
 
         .wrapper {
             padding: 8rem 0;
-        }
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-column-gap: 4rem;
 
-        .copyright {
-            font-weight: bold;
-        }
+            .copyright {
+                font-weight: bold;
+            }
 
-        .attribution {
-            margin-top: 1rem;
-            font-size: .8rem;
-            opacity: .8;
-            line-height: 170%;
-        }
-
-        @media screen and (min-width: 1040px) {
             .attribution {
-                max-width: 50%;
+                margin-top: 1rem;
+                font-size: .8rem;
+                opacity: .8;
+                line-height: 170%;
+            }
+
+            > div:nth-of-type(2) {
+                text-align: right;
+
+                a {
+                    padding: 0 .5rem;
+                    filter: grayscale(1);
+                    transition: .3s all;
+
+                    &:hover {
+                        filter: grayscale(0);
+                    }
+                }
+
+                img {
+                    max-width: 40px;
+                }
             }
         }
     }
