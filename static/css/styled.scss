@@ -232,11 +232,23 @@ body {
 
                 #visor {
                     z-index: 1;
-                    width: 6px;
-                    height: 6px;
+                    width: 7px;
+                    height: 7px;
                     background: radial-gradient(circle, rgba(243,90,28,1) 52%, rgba(0,34,111,1) 100%);
                     animation: VisorSwipe 2s linear 2;
                     animation-direction: alternate;
+                }
+
+                &:hover {
+                    #visor-background {
+                        background-color: #5b40b3;
+                        animation: VisorBackgroundFade 1s linear 0;
+                    }
+
+                    #visor {
+                        animation: VisorSwipe 2s linear infinite;
+                        animation-direction: alternate;
+                    }
                 }
 
                 @keyframes VisorSwipe {
