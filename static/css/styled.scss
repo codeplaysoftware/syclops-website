@@ -203,6 +203,56 @@ body {
                 display: none;
             }
 
+            /**
+             * Logo with a fancy visor effect.
+             */
+            #logo {
+                position: relative;
+
+                img {
+                    z-index: 1;
+                    position: relative;
+                }
+
+                :not(img) {
+                    position: absolute;
+                    top: 29px;
+                    left: 16px;
+                }
+
+                #visor-background {
+                    z-index: 0;
+                    width: 27px;
+                    height: 19px;
+                    background-color: #5b40b3;
+                    animation: VisorBackgroundFade 1s linear 1;
+                    animation-delay: 6s;
+                    animation-fill-mode: forwards;
+                }
+
+                #visor {
+                    z-index: 1;
+                    width: 6px;
+                    height: 6px;
+                    background: radial-gradient(circle, rgba(243,90,28,1) 52%, rgba(0,34,111,1) 100%);
+                    animation: VisorSwipe 2s linear 3;
+                    animation-direction: alternate;
+                }
+
+                @keyframes VisorSwipe {
+                    0%{left: 35px; top: 33px}
+                    25%{left: 25px; top: 32px}
+                    50%{left: 20px; top: 35px}
+                    75%{left: 25px; top: 40px}
+                    100%{left: 35px; top: 40px}
+                }
+
+                @keyframes VisorBackgroundFade {
+                    0%{background-color: #5b40b3;}
+                    100%{background-color: #f35a1c;}
+                }
+            }
+
             @media screen and (max-width: 940px) {
                 .burger {
                     display: block;
