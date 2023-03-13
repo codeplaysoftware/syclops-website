@@ -9,35 +9,35 @@
 
 <html lang="en">
 <head>
-  <title>{{site.title}}</title>
+    <title>{{site.title}}</title>
 
-  <!-- Meta -->
-  <meta charset="UTF-8">
-  <meta http-equiv="x-ua-compatible"
-        content="ie=edge" />
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1" />
-  <meta name="description"
-        content="{{site.description}}" />
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible"
+          content="ie=edge"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1"/>
+    <meta name="description"
+          content="{{site.description}}"/>
 
-  <!-- Stylesheets -->
-  <link rel="stylesheet"
-        href="{{'/static/css/styled.css' | absolute_url}}">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        rel="stylesheet">
-  <link rel="preconnect"
-        href="https://fonts.googleapis.com">
-  <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
-  <link rel="icon"
-        type="image/png"
-        href="favicon.png" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet"
+          href="{{'/static/css/styled.css' | absolute_url}}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+          rel="stylesheet">
+    <link rel="icon"
+          type="image/png"
+          href="favicon.png"/>
 
-  <!-- Content security policy -->
-  <meta content="
+    <!-- Content security policy -->
+    <meta content="
                 default-src
                     'self';
                 object-src
@@ -59,28 +59,29 @@
                     data:;
                 frame-src
                     'self';"
-        http-equiv="Content-Security-Policy"/>
+          http-equiv="Content-Security-Policy"/>
 </head>
 <body>
-  {%- if header == 'expanded' -%}
-  {%- include _includes/headers/expanded.html -%}
-  {%- else -%}
-  {%- include _includes/headers/standard.html -%}
-  {%- endif -%}
-  <!-- Page Content Container -->
-  <div id="content">
+{%- if header == 'expanded' -%}
+{%- include _includes/headers/expanded.html -%}
+{%- else -%}
+{%- include _includes/headers/standard.html -%}
+{%- endif -%}
+<!-- Page Content Container -->
+<div id="content">
     {{ content }}
-  </div>
+</div>
 
-  <!-- Footer -->
-  <section id="footer">
+<!-- Footer -->
+<section id="footer">
     <div class="wrapper">
-      <div class="copyright">&copy; Copyright {{ 'now' | date: "%Y" }} SYCLOPS</div>
-      <div class="attribution">
-        Codasip and the Codasip logo are registered trademarks or trademarks of Codasip Group.
-        Codeplay and the Codeplay logo are registered trademarks of Codeplay Software Ltd.
-        CERN and the CERN logo are trademarks and brand of EUROPEAN ORGANIZATION FOR NUCLEAR RESEARCH.</div>
+        <div class="copyright">&copy; Copyright {{ 'now' | date: "%Y" }} SYCLOPS</div>
+        <div class="attribution">
+            Codasip and the Codasip logo are registered trademarks or trademarks of Codasip Group.
+            Codeplay and the Codeplay logo are registered trademarks of Codeplay Software Ltd.
+            CERN and the CERN logo are trademarks and brand of EUROPEAN ORGANIZATION FOR NUCLEAR RESEARCH.
+        </div>
     </div>
-  </section>
+</section>
 </body>
 </html>
