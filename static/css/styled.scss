@@ -212,6 +212,8 @@ body {
                 img {
                     z-index: 1;
                     position: relative;
+                    width: 266px;
+                    height: 82px;
                 }
 
                 :not(img) {
@@ -224,7 +226,7 @@ body {
                     z-index: 0;
                     width: 27px;
                     height: 19px;
-                    background-color: #5b40b3;
+                    background-color: #5c5991;
                     animation: VisorBackgroundFade 1s linear 1;
                     animation-delay: 4s;
                     animation-fill-mode: forwards;
@@ -232,9 +234,10 @@ body {
 
                 #visor {
                     z-index: 1;
-                    width: 7px;
-                    height: 7px;
-                    background: radial-gradient(circle, rgba(243,90,28,1) 52%, rgba(0,34,111,1) 100%);
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 8px;
+                    background: #eb5b21;
                     animation: VisorSwipe 2s linear 2;
                     animation-direction: alternate;
                 }
