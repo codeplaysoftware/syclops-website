@@ -77,11 +77,7 @@
     <div class="wrapper">
         <div>
             <div class="copyright">&copy; Copyright {{ 'now' | date: "%Y" }} SYCLOPS</div>
-            <div class="attribution">
-                Codasip and the Codasip logo are registered trademarks or trademarks of Codasip Group.
-                Codeplay and the Codeplay logo are registered trademarks of Codeplay Software Ltd.
-                CERN and the CERN logo are trademarks and brand of EUROPEAN ORGANIZATION FOR NUCLEAR RESEARCH.
-            </div>
+            <div class="attribution">{{page.trademarks | join: '. '}}</div>
             <div class="policies">
                 <a href="{{'cookies' | absolute_url}}">Cookie Policy</a>
                 <a href="{{'privacy' | absolute_url}}">Privacy Policy</a>
