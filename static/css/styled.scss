@@ -19,6 +19,16 @@ body {
         color: inherit;
     }
 
+    p {
+        a {
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
     h2 {
         font-size: 1.3rem;
     }
@@ -468,6 +478,20 @@ body {
                 font-size: .8rem;
                 opacity: .8;
                 line-height: 170%;
+            }
+
+            .policies {
+                padding-top: 1rem;
+
+                a {
+                    display: block;
+                    padding: .3rem 0;
+                    font-weight: bold;
+                }
+
+                a:hover {
+                    text-decoration: underline;
+                }
             }
 
             > div:nth-of-type(2) {
