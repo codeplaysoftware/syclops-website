@@ -464,38 +464,54 @@ body {
         background-color: #ccc;
 
         .wrapper {
-            padding: 8rem 0;
             display: grid;
-            grid-template-columns: 2fr 1fr;
-            grid-column-gap: 4rem;
+            padding: 8rem 0;
+            grid-template-rows: 1fr 1fr;
+            grid-row-gap: 2rem;
+
+            @media screen and (min-width: 1000px) {
+                grid-template-columns: 2fr 1fr;
+                grid-column-gap: 4rem;
+
+                > div:nth-of-type(2) {
+                    text-align: right;
+                }
+            }
 
             .copyright {
                 font-weight: bold;
             }
 
+            .attribution,
+            .eu-funding {
+                font-size: .9rem;
+            }
+
             .attribution {
                 margin-top: 1rem;
-                font-size: .8rem;
                 opacity: .8;
                 line-height: 170%;
             }
 
-            .policies {
-                padding-top: 1rem;
+            .eu-funding {
+                background-color: rgba(0, 0, 0, .1);
+                border-radius: 6px;
+                padding: 1rem;
+                display: flex;
+                flex-direction: row;
+                margin-top: 1.5rem;
+                align-items: center;
 
-                a {
-                    display: block;
-                    padding: .3rem 0;
-                    font-weight: bold;
-                }
-
-                a:hover {
-                    text-decoration: underline;
+                img {
+                    width: 70px;
+                    margin-right: 1rem;
                 }
             }
 
-            > div:nth-of-type(2) {
-                text-align: right;
+            .socials {
+                img {
+                    max-width: 40px;
+                }
 
                 a {
                     padding: 0 .5rem;
@@ -506,9 +522,19 @@ body {
                         filter: grayscale(0);
                     }
                 }
+            }
 
-                img {
-                    max-width: 40px;
+            .policies {
+                padding-top: 2rem;
+
+                a {
+                    display: block;
+                    padding: .3rem 0;
+                    font-weight: bold;
+                }
+
+                a:hover {
+                    text-decoration: underline;
                 }
             }
         }
