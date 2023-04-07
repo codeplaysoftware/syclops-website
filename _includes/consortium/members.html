@@ -1,0 +1,4 @@
+{% for member in site.consortium_members %}
+<a class="{{member.name | slugify}}" href="{{member.url}}" target="_blank" rel="noopener">
+  <img src="{{member.logo | absolute_url}}" alt="{{member.name}} Logo" /></a>
+{% endfor %}

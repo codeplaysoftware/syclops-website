@@ -20,6 +20,33 @@ exclude:
 twitter: https://twitter.com/syclopseu
 youtube: https://www.youtube.com/@syclopseu
 
+# List of consortium members (in alphabetical order)
+consortium_members:
+  - name: "Accelom"
+    url: "https://accelom.com/"
+    logo: "static/images/partners/accelom.png"
+  - name: "CERN"
+    url: "https://www.cern"
+    logo: "static/images/partners/cern.png"
+  - name: "Codasip"
+    url: "https://www.codasip.com"
+    logo: "static/images/partners/codasip.png"
+  - name: "Codeplay"
+    url: "https://www.codeplay.com"
+    logo: "static/images/partners/codeplay.png"
+  - name: "Eurecom"
+    url: "https://www.eurecom.fr/en"
+    logo: "static/images/partners/eurecom.png"
+  - name: "Heidelberg"
+    url: "https://www.uni-heidelberg.de/en"
+    logo: "static/images/partners/heidelberg.png"
+  - name: "HIRO Microdatacenters"
+    url: "https://hiro-microdatacenters.nl"
+    logo: "static/images/partners/hiro.png"
+  - name: "INESC-ID"
+    url: "https://www.inesc-id.pt"
+    logo: "static/images/partners/inescid.png"
+
 includes_dir: "/"
 
 sass:
