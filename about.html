@@ -37,28 +37,13 @@ layout: page
                     AI systems.</p>
             </div>
             <div>
-                <h2>Visit Partners</h2>
+                <h2>Consortium Members</h2>
                 <ul class="links">
+                    {% for member in site.consortium_members %}
                     <li>
-                        <a href="https://codasip.com/"
-                           target="_blank"
-                           rel="noopener">Codasip</a>
+                        <a href="{{member.url}}" target="_blank" rel="noopener">{{member.name}}</a>
                     </li>
-                    <li>
-                        <a href="https://hiro-microdatacenters.nl/"
-                           target="_blank"
-                           rel="noopener">HIRO Microdatacenters</a>
-                    </li>
-                    <li>
-                        <a href="https://codeplay.com"
-                           target="_blank"
-                           rel="noopener">Codeplay&reg;</a>
-                    </li>
-                    <li>
-                        <a href="https://accelom.com/"
-                           target="_blank"
-                           rel="noopener">Accelom</a>
-                    </li>
+                    {% endfor %}
                 </ul>
 
                 <h2>Other Links</h2>

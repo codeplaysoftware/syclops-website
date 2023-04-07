@@ -1,23 +1,4 @@
-<a class="accelom" href="https://accelom.com/" target="_blank" rel="noopener">
-  <img src="{{'static/images/partners/accelom.png' | absolute_url}}" alt="Accelom Logo" /></a>
-
-<a class="cern" href="https://home.web.cern.ch/" target="_blank" rel="noopener">
-  <img src="{{'static/images/partners/cern.png' | absolute_url}}" alt="CERN Logo" /></a>
-
-<a class="codasip" href="https://codasip.com/" target="_blank" rel="noopener">
-  <img src="{{'static/images/partners/codasip.png' | absolute_url}}" alt="Codasip Logo" /></a>
-
-<a class="codeplay" href="https://codeplay.com" target="_blank" rel="noopener">
-  <img src="{{'static/images/partners/codeplay.png' | absolute_url}}" alt="Codeplay Logo" /></a>
-
-<a class="eurecom" href="https://www.eurecom.fr/en" target="_blank" rel="noopener">
-  <img src="{{'static/images/partners/eurecom.png' | absolute_url}}" alt="Eurecom Logo" /></a>
-
-<a class="heidelberg" href="https://www.uni-heidelberg.de/en" target="_blank" rel="noopener">
-  <img src="{{'static/images/partners/heidelberg.png' | absolute_url}}" alt="Heidelberg Logo" /></a>
-
-<a class="hiro" href="https://hiro-microdatacenters.nl/" target="_blank" rel="noopener">
-  <img src="{{'static/images/partners/hiro.png' | absolute_url}}" alt="HIRO Microdatacenters Logo" /></a>
-
-<a class="inescid" href="https://www.inesc-id.pt/" target="_blank" rel="noopener">
-  <img src="{{'static/images/partners/inescid.png' | absolute_url}}" alt="INESC-ID Logo" /></a>
+{% for member in site.consortium_members %}
+<a class="{{member.name | slugify}}" href="{{member.url}}" target="_blank" rel="noopener">
+  <img src="{{member.logo | absolute_url}}" alt="{{member.name}} Logo" /></a>
+{% endfor %}
