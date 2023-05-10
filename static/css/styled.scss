@@ -694,6 +694,15 @@ body {
                 justify-content: flex-end;
             }
         }
+
+        .update-panels {
+            grid-template-columns: 1fr !important;
+            grid-gap: 1rem;
+
+            @media screen and (min-width: 930px) {
+                grid-template-columns: 1fr 1fr !important;
+            }
+        }
     }
 
     /**
