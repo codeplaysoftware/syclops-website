@@ -6,7 +6,8 @@ This repository contains the source files and related content for the SYCLOPS pr
 
 ## Funding
 
-This project has received funding from the European Union's Horizon research and innovation programme under grant agreement No 101092877.
+This project has received funding from the European Union's Horizon research and innovation programme under grant 
+agreement No 101092877.
 
 ## Website
 
