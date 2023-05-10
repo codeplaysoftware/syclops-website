@@ -28,7 +28,7 @@ fully-open, AI acceleration approach.
 
 The project kicked off its activities in January 2023 with an online meeting, where all partners took the 
 floor to present their ambitious plans to make the project a success. SYCLOPS brings together consortium 
-partners will expertise in several fields (computer architecture, programming languages, systems and runtimes, 
+partners with expertise in several fields (computer architecture, programming languages, systems and runtimes, 
 Big Data, High- Performance Computing) with the aim of making groundbreaking advances over state-of-the-art in 
 AI acceleration along three axes: (i) infrastructure tools for simple, fast, cost-efficient customization of RISC-V 
 accelerators, (ii) platform tools (compiler, runtime, interpreter) for SYCL-based cross-architecture programming, 
