@@ -47,10 +47,30 @@ consortium_members:
     url: "https://www.inesc-id.pt"
     logo: "static/images/partners/inescid.png"
 
+# Includes
 includes_dir: "/"
+include:
+  - .htaccess
 
+# SASS Styling
 sass:
   style: compressed
 
-include:
-  - .htaccess
+# Collections
+collections_dir: _collections
+collections:
+  updates:
+    output: true
+    permalink: /updates/:year/:month/:day/:title
+
+# Pagination
+pagination:
+  enabled: true
+  per_page: 8
+  permalink: '/:num/' # Pages are index.html inside this folder (default)
+  title: ':title - page :num'
+  sort_field: 'date'
+  sort_reverse: true
+  category: 'posts'
+  extension: html
+  indexpage: 'index'

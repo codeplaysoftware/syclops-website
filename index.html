@@ -3,33 +3,81 @@ layout: page
 header: expanded
 ---
 
-<!-- Section: Tabs -->
-<section id="tabs">
-    <div class="wrapper">
-        <a href="{{'about' | absolute_url}}">
-            <span class="material-icons">auto_stories</span>
-            <h1>About</h1>
-            <p>Read about the project and our goals for democratizing AI.</p>
-        </a>
-        <a href="{{'consortium' | absolute_url}}">
-            <span class="material-icons">diversity_1</span>
-            <h1>Consortium </h1>
-            <p>View the partners and community members involved in this project.</p>
-        </a>
-        <a href="{{'contact' | absolute_url}}">
-            <span class="material-icons">email</span>
-            <h1>Contact</h1>
-            <p>Get in touch with us with any questions or queries, we'd love to help.</p>
-        </a>
-    </div>
-</section>
-
-<!-- Section: Home -->
-<section id="home">
-    <div class="wrapper">
-        <!-- Consortium -->
-        <div class="partners">
-            {%- include _includes/consortium/members.html -%}
+<div id="home">
+    <!-- Section: Tabs -->
+    <section id="tabs">
+        <div class="wrapper">
+            <a href="{{'about' | absolute_url}}">
+                <span class="material-icons">auto_stories</span>
+                <h1>About</h1>
+                <p>Read about the project and our goals for democratizing AI.</p>
+            </a>
+            <a href="{{'consortium' | absolute_url}}">
+                <span class="material-icons">diversity_1</span>
+                <h1>Consortium </h1>
+                <p>View the partners and community members involved in this project.</p>
+            </a>
+            <a href="{{'contact' | absolute_url}}">
+                <span class="material-icons">email</span>
+                <h1>Contact</h1>
+                <p>Get in touch with us with any questions or queries, we'd love to help.</p>
+            </a>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- Section: Updates -->
+    <section id="updates">
+        <div class="wrapper">
+            <a class="side-title" href="{{'updates' | absolute_url}}">
+                <span class="material-icons">newspaper</span> Updates
+            </a>
+
+            <!-- Updates -->
+            <div class="update-panels">
+                {%- for update in site.updates limit:3 -%}
+                <a href="{{update.url | absolute_url}}">
+                    <div>
+                        <span class="material-icons">event</span> {{update.date | date: "%m/%d/%Y" }}
+                    </div>
+                    <div>
+                        <h1>{{update.title}}</h1>
+                        <h2>{{update.content | strip_html | truncatewords:50}}</h2>
+                    </div>
+                    <div>
+                        {%- for tag in update.tags -%}
+                        <div class="update tag {{tag | slugify}}">{{tag | capitalize}}</div>
+                        {%- endfor -%}
+                    </div>
+                </a>
+                {%- endfor -%}
+
+                {% if site.updates.size < 3 %}
+                    {% assign short_fall = 3 | minus: site.updates.size %}
+
+                    {% for num in (1..short_fall) %}
+                    <div class="placeholder">
+                        <div>
+                            Coming Soon!
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Home -->
+    <section id="partners">
+        <div class="wrapper">
+            <a class="side-title" href="{{'consortium' | absolute_url}}">
+                <span class="material-icons">diversity_1</span> Consortium
+            </a>
+
+            <!-- Consortium -->
+            <div class="partners">
+                {%- include _includes/consortium/members.html -%}
+            </div>
+        </div>
+    </section>
+</div>
+
