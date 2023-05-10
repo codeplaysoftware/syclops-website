@@ -2,7 +2,7 @@
 
 ![Project Banner](https://www.syclops.org/static/images/updates/2023-01-01-launch-of-the-new-horizon-europe-project-syclops/syclops-banner.png)
 
-The respository contains the source files and related content for the SYCLOPS project website. 
+This repository contains the source files and related content for the SYCLOPS project website. 
 
 ## Funding
 
