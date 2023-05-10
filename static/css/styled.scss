@@ -9,6 +9,7 @@ body {
     font-family: 'Roboto', sans-serif;
 
     --hint-color: #2d04c4;
+    --hint-color-alt: #fd1778;
 
     * {
         box-sizing: border-box !important;
@@ -84,7 +85,7 @@ body {
                     }
 
                     &:hover {
-                        box-shadow: 0px -6px 0px 0px #fd1778;
+                        box-shadow: 0px -6px 0px 0px var(--hint-color-alt);
                     }
                 }
             }
@@ -109,12 +110,12 @@ body {
 
     .update.deliverable,
     .update.launch {
-        background-color: #2d04c4;
+        background-color: var(--hint-color);
         color: white;
     }
 
     .update.alert {
-        background-color: #2d04c4;
+        background-color: var(--hint-color);
         color: white;
     }
 
@@ -311,7 +312,7 @@ body {
 
             &:hover {
                 opacity: 1;
-                box-shadow: 0px -6px 0px 0px #fd1778;
+                box-shadow: 0px -6px 0px 0px var(--hint-color-alt);
             }
 
             & h1, & p {
@@ -378,8 +379,7 @@ body {
      */
     section#header {
         color: white;
-        background: #05002c;
-        background-image: url(../images/bg.jpg);
+        background: #05002c url(../images/bg.jpg);
         background-size: cover;
         padding: 0;
 
@@ -600,8 +600,8 @@ body {
 
                 &:not(:hover) > a:first-of-type,
                 > a:hover {
-                    background-color: #2d04c4;
-                    box-shadow: 0px -6px 0px 0px #fd1778;
+                    background-color: var(--hint-color);
+                    box-shadow: 0px -6px 0px 0px var(--hint-color-alt);
                 }
             }
 
