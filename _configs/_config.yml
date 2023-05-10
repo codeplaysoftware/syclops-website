@@ -47,17 +47,17 @@ consortium_members:
     url: "https://www.inesc-id.pt"
     logo: "static/images/partners/inescid.png"
 
+# Includes
 includes_dir: "/"
-
-sass:
-  style: compressed
-
 include:
   - .htaccess
 
+# SASS Styling
+sass:
+  style: compressed
+
 # Collections
 collections_dir: _collections
-
 collections:
   updates:
     output: true
