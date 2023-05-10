@@ -1,0 +1,23 @@
+<!-- Paginator -->
+<div class="paginator">
+    {%- if paginator.total_pages > 1 -%}
+    <div>
+        {%- if paginator.next_page -%}
+        <a class="button image-button" href="{{ paginator.next_page_path }}" rel="prev" title="View Older Items">
+            <i class="material-icons">arrow_back_ios</i>Older</a>
+        {%- else -%}
+        <a class="button image-button disabled" rel="prev">
+            <i class="material-icons">arrow_back_ios</i>Older</a>
+        {%- endif -%}
+    </div>
+    <div>
+        {%- if paginator.previous_page -%}
+        <a class="button image-button" href="{{ paginator.previous_page_path }}" rel="next" title="View Newer Items">
+            <i class="material-icons">arrow_forward_ios</i>Newer</a>
+        {%- else -%}
+        <a class="button image-button disabled" rel="next">
+            <i class="material-icons">arrow_forward_ios</i>Newer</a>
+        {%- endif -%}
+    </div>
+    {%- endif -%}
+</div>

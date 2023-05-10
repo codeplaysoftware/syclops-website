@@ -11,7 +11,9 @@
     </div>
     <div class="items">
         <a href="{{'' | absolute_url}}"
-           {% if page.url contains "index.html" or page.url == '/' %} class="selected" {% endif %}> Home</a>
+           {% if page.url == '/' %} class="selected" {% endif %}> Home</a>
+        <a href="{{'updates' | absolute_url}}"
+           {% if page.url contains "updates/" %} class="selected" {% endif %}> Updates</a>
         <a href="{{'about' | absolute_url}}"
            {% if page.url contains "about.html" %} class="selected" {% endif %}> About</a>
         <a href="{{'consortium' | absolute_url}}"

@@ -1,0 +1,63 @@
+---
+layout: page
+---
+
+{% assign encoded_update_url = page.url | absolute_url | url_encode %}
+{% assign encoded_update_title = page.title | url_encode %}
+
+{% assign share_twitter = "https://twitter.com/intent/tweet?url="
+    | append: encoded_update_url
+    | append: '&title='
+    | append: encoded_update_title  %}
+
+{% assign share_facebook = "https://www.facebook.com/sharer/sharer.php"
+    | append: encoded_update_url %}
+
+{% assign share_linkedin = "https://www.linkedin.com/shareArticle?mini=true&url="
+    | append: encoded_update_url
+    | append: '&title='
+    | append: encoded_update_title  %}
+
+<!-- Section: Update -->
+<section id="update" class="update-elements">
+    <div class="wrapper content-and-side-content">
+        <div>
+            <a class="button back" href="{{'updates' | absolute_url}}" title="Back to All Updates">
+                <span class="material-icons">arrow_back</span> Back</a>
+            <header>
+                <div>
+                    <h1>{{page.title}}</h1>
+                </div>
+                <div>
+                    <h2><span class="material-icons">event</span> {{page.date | date: "%m/%d/%Y" }}</h2>
+                </div>
+            </header>
+            <article>
+                {{page.content}}
+            </article>
+        </div>
+        <div>
+            <h2>Tags</h2>
+            <div>
+                {%- for tag in page.tags -%}
+                <div class="update tag {{tag | slugify}}">{{tag | capitalize}}</div>
+                {%- endfor -%}
+            </div>
+
+            <h2>Share</h2>
+            <ul class="styled-list links">
+                <li>
+                    <a href="{{share_twitter}}" target="_blank" rel="noopener">Twitter</a>
+                </li>
+                <li>
+                    <a href="{{share_facebook}}" target="_blank" rel="noopener">Facebook</a>
+                </li>
+                <li>
+                    <a href="{{share_linkedin}}" target="_blank" rel="noopener">LinkedIn</a>
+                </li>
+
+                {{new_var}}
+            </ul>
+        </div>
+    </div>
+</section>

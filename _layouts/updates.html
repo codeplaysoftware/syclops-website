@@ -1,0 +1,60 @@
+---
+layout: page
+---
+
+<!-- Section: Updates -->
+<section id="updates" class="update-elements">
+    <div class="wrapper content-and-side-content compact">
+        <div>
+            <div class="header">
+                <div>
+                    <h1><span class="material-icons">newspaper</span>Updates</h1>
+                </div>
+                <div>
+                    {%- include _includes/paginator.html -%}
+                </div>
+            </div>
+
+            <div class="update-panels">
+                {%- for update in paginator.posts -%}
+                <a href="{{update.url | absolute_url}}">
+                    <div>
+                        <span class="material-icons">event</span> {{update.date | date: "%m/%d/%Y" }}
+                    </div>
+                    <div>
+                        <h1>{{update.title}}</h1>
+                        <h2>{{update.content | strip_html | truncatewords:50}}</h2>
+                    </div>
+                    <div>
+                        {%- for tag in update.tags -%}
+                        <div class="update tag {{tag | slugify}}">{{tag | capitalize}}</div>
+                        {%- endfor -%}
+                    </div>
+                </a>
+                {%- endfor -%}
+
+                {% if site.updates.size < 2 %}
+                {% assign short_fall = 2 | minus: site.updates.size %}
+
+                {% for num in (1..short_fall) %}
+                <div class="placeholder">
+                    <div>
+                        Coming Soon!
+                    </div>
+                </div>
+                {% endfor %}
+                {% endif %}
+            </div>
+
+            {%- include _includes/paginator.html -%}
+        </div>
+        <div>
+            <h1>
+                <span class="material-icons">public</span>Socials
+            </h1>
+            <div id="twitter">
+                <p>Coming Soon!</p>
+            </div>
+        </div>
+    </div>
+</section>
