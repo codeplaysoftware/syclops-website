@@ -725,6 +725,10 @@ body {
 
         article {
             line-height: 160%;
+
+            img {
+                max-width: 100%;
+            }
         }
     }
 
