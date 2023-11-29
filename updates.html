@@ -18,7 +18,8 @@ permalink: /updates/
             </div>
 
             <div class="update-panels">
-                {%- for update in site.updates -%}
+                {% assign sorted_updates = site.updates | sort: 'date' | reverse %}
+                {%- for update in sorted_updates -%}
                 <a href="{{update.url | absolute_url}}">
                     <div>
                         <span class="material-icons">event</span> {{update.date | date: "%m/%d/%Y" }}
