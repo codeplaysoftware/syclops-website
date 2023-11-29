@@ -34,7 +34,8 @@ header: expanded
 
             <!-- Updates -->
             <div class="update-panels">
-                {%- for update in site.updates limit:3 -%}
+                {% assign sorted_updates = site.updates | sort: 'date' | reverse %}
+                {%- for update in sorted_updates limit:3 -%}
                 <a href="{{update.url | absolute_url}}">
                     <div>
                         <span class="material-icons">event</span> {{update.date | date: "%m/%d/%Y" }}

@@ -18,7 +18,8 @@ permalink: /updates/
             </div>
 
             <div class="update-panels">
-                {%- for update in site.updates -%}
+                {% assign sorted_updates = site.updates | sort: 'date' | reverse %}
+                {%- for update in sorted_updates -%}
                 <a href="{{update.url | absolute_url}}">
                     <div>
                         <span class="material-icons">event</span> {{update.date | date: "%m/%d/%Y" }}
@@ -50,12 +51,25 @@ permalink: /updates/
 
             {%- include _includes/paginator.html -%}
         </div>
-        <div>
+        <div class="socials">
             <h1>
                 <span class="material-icons">public</span>Socials
             </h1>
-            <div id="twitter">
-                <p>Coming Soon!</p>
+            <div>
+                <a id="twitter"
+                   href="https://twitter.com/syclopseu"
+                   target="_blank"
+                   rel="noopener">
+                    <img src="/static/images/socials/twitter.svg" alt="Twitter Icon" />
+                    Twitter/X
+                </a>
+                <a id="linkedin"
+                   href="https://www.linkedin.com/company/syclops-project/?viewAsMember=true"
+                   target="_blank"
+                   rel="noopener">
+                    <img src="/static/images/socials/linkedin.svg" alt="LinkedIn Icon" />
+                    LinkedIn
+                </a>
             </div>
         </div>
     </div>
