@@ -703,6 +703,26 @@ body {
                 grid-template-columns: 1fr 1fr !important;
             }
         }
+
+        .socials {
+            a {
+                display: block;
+                background-color: #f5f5f5;
+                padding: 1rem;
+                border-radius: 6px;
+                margin-bottom: 1rem;
+
+                img {
+                    max-width: 25px;
+                    vertical-align: middle;
+                    margin-right: .5rem;
+                }
+            }
+
+            a:hover {
+                background-color: #fff;
+            }
+        }
     }
 
     /**
