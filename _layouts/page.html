@@ -36,6 +36,15 @@
           type="image/png"
           href="{{'favicon.png' | absolute_url}}"/>
 
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+    <script src="{{'/static/js/jquery.cookiesaccepted.js' | absolute_url}}"
+            type="text/javascript"></script>
+    <script src="{{'/static/js/index.js' | absolute_url}}"
+            type="text/javascript"></script>
+
     <!-- Content security policy -->
     <meta content="
                 default-src
@@ -49,19 +58,24 @@
                     'self'
                     https://fonts.googleapis.com;
                 script-src
-                    'self';
+                    'self'
+                    https://code.jquery.com
+                    https://www.googletagmanager.com
+                    https://www.google-analytics.com;
                 connect-src
-                    'self';
+                    'self'
+                    https://*.google-analytics.com;
                 img-src
                     'self'
                     https:
                     http:
-                    data:;
+                    data:
+                    https://*.google-analytics.com;
                 frame-src
                     'self';"
           http-equiv="Content-Security-Policy"/>
 </head>
-<body>
+<body data-ga="{{site.ga}}">
 {%- if header == 'expanded' -%}
 {%- include _includes/headers/expanded.html -%}
 {%- else -%}
@@ -109,5 +123,6 @@
         </div>
     </div>
 </section>
+{%- include _includes/cookies.html -%}
 </body>
 </html>

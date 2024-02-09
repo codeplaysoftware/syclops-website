@@ -20,6 +20,9 @@ exclude:
 twitter: https://twitter.com/syclopseu
 youtube: https://www.youtube.com/@syclopseu
 
+# Google Analytics Token
+ga: ''
+
 # List of consortium members (in alphabetical order)
 consortium_members:
   - name: "Accelom"
