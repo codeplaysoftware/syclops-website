@@ -30,7 +30,9 @@ for the next generation of RISC-V vector processors using the oneAPI Constructio
 CEO and co-founder Andrew Richards demonstrates this by running code using an Intel CPU and a custom FPGA simulating a
 RISC-V accelerator.
 
-![Codeplay's Andrew Richards Demos oneAPI Construction Kit](/static/images/updates/2024-05-14-the-oneapi-construction-kit-and-syclops/andrew-richards-demo.png)
+<video width="879" height="495" controls>
+  <source src="https://developer.codeplay.com/assets/img/products/oneapi/construction-kit/home/video.m4v" type="video/mp4">
+</video>
 
 Codeplay and Axelera AI jointly released a case study that highlighted the success Axelera AI had when using the
 oneAPI Construction Kit to bring open standards to their Metis AIPU. This was a real testament to what can be
