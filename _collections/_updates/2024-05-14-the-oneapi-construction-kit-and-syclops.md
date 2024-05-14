@@ -30,7 +30,7 @@ for the next generation of RISC-V vector processors using the oneAPI Constructio
 CEO and co-founder Andrew Richards demonstrates this by running code using an Intel CPU and a custom FPGA simulating a
 RISC-V accelerator.
 
-<video width="879" height="495" controls>
+<video controls>
   <source src="https://developer.codeplay.com/assets/img/products/oneapi/construction-kit/home/video.m4v" type="video/mp4">
 </video>
 
