@@ -64,18 +64,23 @@ body {
     button, .button {
         padding: 1rem;
         font-size: 1rem;
-        border: 0;
         background-color: var(--hint-color);
         color: white;
         border-radius: 6px;
         cursor: pointer;
         opacity: .8;
         transition: .1s all;
-        display: block;
+        display: inline-flex;
+        align-items: center;
 
         &:hover {
             opacity: 1;
             transform: scale(1.05);
+        }
+
+        span {
+            vertical-align: middle;
+            margin-right: .4rem;
         }
     }
 
@@ -811,10 +816,6 @@ body {
     .update-elements {
         .button.back {
             display: inline-flex;
-            align-items: center;
-            padding: 1rem;
-            border: #ccc 1px solid;
-            border-radius: 6px;
         }
     }
 
