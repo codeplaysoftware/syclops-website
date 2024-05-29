@@ -61,7 +61,7 @@ body {
         max-width: 1300px;
     }
 
-    button {
+    button, .button {
         padding: 1rem;
         font-size: 1rem;
         border: 0;
@@ -484,7 +484,7 @@ body {
                 }
             }
 
-            @media screen and (max-width: 940px) {
+            @media screen and (max-width: 1090px) {
                 .burger {
                     display: block;
                 }
@@ -741,6 +741,28 @@ body {
 
             a:hover {
                 background-color: #fff;
+            }
+        }
+    }
+
+    /**
+     * Section: Deliverables
+     */
+    section#deliverables {
+        table {
+            width: 100%;
+
+            td, th {
+                padding: 1rem;
+
+            }
+
+            td:nth-of-type(1) {
+                text-align: center;
+            }
+
+            tbody tr:nth-of-type(odd) td {
+                background-color: #dcdcdc;
             }
         }
     }
