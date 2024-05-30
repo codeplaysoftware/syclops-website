@@ -61,21 +61,26 @@ body {
         max-width: 1300px;
     }
 
-    button {
+    button, .button {
         padding: 1rem;
         font-size: 1rem;
-        border: 0;
         background-color: var(--hint-color);
         color: white;
         border-radius: 6px;
         cursor: pointer;
         opacity: .8;
         transition: .1s all;
-        display: block;
+        display: inline-flex;
+        align-items: center;
 
         &:hover {
             opacity: 1;
             transform: scale(1.05);
+        }
+
+        span {
+            vertical-align: middle;
+            margin-right: .4rem;
         }
     }
 
@@ -484,7 +489,7 @@ body {
                 }
             }
 
-            @media screen and (max-width: 940px) {
+            @media screen and (max-width: 1090px) {
                 .burger {
                     display: block;
                 }
@@ -746,6 +751,28 @@ body {
     }
 
     /**
+     * Section: Deliverables
+     */
+    section#deliverables {
+        table {
+            width: 100%;
+
+            td, th {
+                padding: 1rem;
+
+            }
+
+            td:nth-of-type(1) {
+                text-align: center;
+            }
+
+            tbody tr:nth-of-type(odd) td {
+                background-color: #dcdcdc;
+            }
+        }
+    }
+
+    /**
      * Section: Update
      */
     section#update {
@@ -789,10 +816,6 @@ body {
     .update-elements {
         .button.back {
             display: inline-flex;
-            align-items: center;
-            padding: 1rem;
-            border: #ccc 1px solid;
-            border-radius: 6px;
         }
     }
 
