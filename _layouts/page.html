@@ -42,8 +42,9 @@
             crossorigin="anonymous"></script>
     <script src="{{'/static/js/jquery.cookiesaccepted.js' | absolute_url}}"
             type="text/javascript"></script>
-    <script src="{{'/static/js/index.js' | absolute_url}}"
-            type="text/javascript"></script>
+
+    <!-- Fathom -->
+    <script src="https://cdn.usefathom.com/script.js" data-site="{{ site.fa }}" defer></script>
 
     <!-- Content security policy -->
     <meta content="
@@ -62,21 +63,21 @@
                     'self'
                     https://code.jquery.com
                     https://www.googletagmanager.com
-                    https://www.google-analytics.com;
+                    https://cdn.usefathom.com/script.js;
                 connect-src
                     'self'
-                    https://*.google-analytics.com;
+                    https://cdn.usefathom.com;
                 img-src
                     'self'
                     https:
                     http:
                     data:
-                    https://*.google-analytics.com;
+                    https://cdn.usefathom.com;
                 frame-src
                     'self';"
           http-equiv="Content-Security-Policy"/>
 </head>
-<body data-ga="{{site.ga}}">
+<body>
 {%- if header == 'expanded' -%}
 {%- include _includes/headers/expanded.html -%}
 {%- else -%}
