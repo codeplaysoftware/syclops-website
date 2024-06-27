@@ -1,5 +1,5 @@
 ---
-title: "AdaptivePerf SYCLOPS"
+title: "AdaptivePerf and SYCLOPS"
 date: 2024-06-27
 layout: update
 tags:
