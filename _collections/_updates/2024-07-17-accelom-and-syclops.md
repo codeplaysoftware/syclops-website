@@ -30,8 +30,6 @@ by relying on SYCL for cross-architecture parallelism, SYCL-GAL will also enable
 data analysis, making it possible to deploy the same pipeline on CPUs, GPUs, and accelerators from several hardware
 vendors.
 
-<hr />
-
 [1]: https://www.intel.com/content/dam/www/public/us/en/documents/white-papers/deploying-gatk-best-practices-paper.pdf
 [2]: https://www.nvidia.com/en-us/clara/genomics/
 [3]: https://emea.illumina.com/products/by-type/informatics-products/dragen-secondary-analysis/order.html
