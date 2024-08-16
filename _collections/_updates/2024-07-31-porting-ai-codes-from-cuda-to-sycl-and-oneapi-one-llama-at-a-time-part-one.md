@@ -145,3 +145,5 @@ process all files.
 
 Now, we have successfully converted our llama.cpp project from CUDA to SYCL. In part two, we will build and run this on
 NVIDIA and Intel GPUs.
+
+[Click here to view part two.](/updates/2024/08/13/part-two-porting-ai-codes-from-cuda-to-sycl-and-oneapi-one-llama-at-a-time)

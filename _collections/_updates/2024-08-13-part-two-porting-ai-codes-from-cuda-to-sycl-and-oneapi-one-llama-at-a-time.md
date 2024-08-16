@@ -11,7 +11,7 @@ tags:
 
 ## Prelude
 
-[In our first part](https://codeplay.com/portal/blogs/2024/07/31/porting-ai-codes-from-cuda-to-sycl-and-oneapi-one-llama-at-a-time-part-one)
+[In our first part](/updates/2024/07/31/porting-ai-codes-from-cuda-to-sycl-and-oneapi-one-llama-at-a-time-part-one)
 we looked at the conversion from CUDA to SYCL via the whole project migration tool, SYCLomatic. Now we are going to take
 this portable code, and run it across an NVIDIA and Intel GPU.
 
