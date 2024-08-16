@@ -811,6 +811,17 @@ body {
                 width: 100%;
                 height: auto;
             }
+
+            pre code {
+                display: block;
+                max-width: 100%;
+                word-break: break-word;
+                white-space: break-spaces;
+                background-color: var(--hint-color);
+                color: white;
+                padding: 1rem;
+                border-radius: 12px;
+            }
         }
     }
 
