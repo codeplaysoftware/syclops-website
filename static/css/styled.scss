@@ -812,6 +812,13 @@ body {
                 height: auto;
             }
 
+            code {
+                padding: .1rem .2rem;
+                background-color: #d0d0d0;
+                display: inline-block;
+                border-radius: 6px;
+            }
+
             pre code {
                 display: block;
                 max-width: 100%;
