@@ -21,7 +21,7 @@ Now we are going to build the converted code directly using the CMake file that 
 build the main binary for llama.cpp.
 
 ```shell
-$ cd dpct_out &amp;&amp; mkdir syclbuild &amp;&amp; cd syclbuild
+$ cd dpct_out && mkdir syclbuild && cd syclbuild
 $ MKLROOT=/home/ruyman/soft/mkl CC=icx CXX=icpx cmake .. -DLLAMA_CUBLAS=ON -DCMAKE_CUDA_ARCHITECTURES=80 -DCMAKE_CXX_FLAGS="-fsycl -fsycl-targets=nvptx64-nvidia-cuda -L${MKLROOT}/lib" 
 $ make main
 ```

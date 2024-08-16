@@ -106,7 +106,7 @@ The first step is to clone the llama.cpp repository, and configure cmake as usua
 $ git clone https://github.com/ggerganov/llama.cpp.git
 $ cd llama.cpp
 $ git checkout 3c04bf6da89eaf4c7d317e0518f0687dfcbf2de7
-$ mkdir build &amp;&amp; cd build
+$ mkdir build && cd build
 $ cmake .. -DLLAMA_CUBLAS=ON -DLLAMA_CUDA=ON -
 $ DCMAKE_CUDA_ARCHITECTURES=80
 ```
