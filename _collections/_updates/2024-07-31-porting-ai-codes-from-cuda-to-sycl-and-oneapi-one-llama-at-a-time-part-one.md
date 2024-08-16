@@ -129,7 +129,7 @@ Now we are going to use the information collected by intercept-build to generate
 build directory by running the dpct command itself:
 
 ```shell
-$ cd ../.. &amp;&amp; mkdir dpct_out
+$ cd ../.. && mkdir dpct_out
 ```
 
 ```shell
