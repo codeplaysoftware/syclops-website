@@ -1,12 +1,12 @@
 ---
-title: "DAC 2024 – Showcasing the future of RISC-V through EDA"
+title: "Sunny skies and electric energy: RISC-V Summit Europe 2024 shines in Munich"
 date: 2024-06-28
 layout: update
 tags:
   - codasip
   - risc-v
-  - dac-2024
-link: https://codasip.com/2024/07/16/dac-2024-showcasing-the-future-of-risc-v-through-eda/
+  - energy
+link: https://codasip.com/2024/06/28/sunny-skies-and-electric-energy-risc-v-summit-europe-2024-shines-in-munich/
 ---
 
 As I sat on the plane in Boston it’s fair to say that I was curious about what DAC 2024 would bring. The previous year
