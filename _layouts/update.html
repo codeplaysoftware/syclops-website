@@ -34,6 +34,16 @@ layout: page
             </header>
             <article>
                 {{page.content}}
+
+                {% if page.link %}
+                <a class="button image-button"
+                   href="{{ page.link }}"
+                   rel="noopener"
+                   target="_blank"
+                   title="Continue Reading on Linked Site">
+                    <i class="material-icons">link</i> Continue Reading...
+                </a>
+                {% endif %}
             </article>
         </div>
         <div>
