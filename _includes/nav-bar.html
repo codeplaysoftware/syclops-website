@@ -10,18 +10,31 @@
         </a>
     </div>
     <div class="items">
-        <a href="{{'' | absolute_url}}"
-           {% if page.url == '/' %} class="selected" {% endif %}> Home</a>
-        <a href="{{'updates' | absolute_url}}"
-           {% if page.url contains "updates/" %} class="selected" {% endif %}> Updates</a>
-        <a href="{{'about' | absolute_url}}"
-           {% if page.url contains "about.html" %} class="selected" {% endif %}> About</a>
-        <a href="{{'consortium' | absolute_url}}"
-           {% if page.url contains "consortium.html" %} class="selected" {% endif %}> Consortium</a>
-        <a href="{{'deliverables' | absolute_url}}"
-           {% if page.url contains "deliverables.html" %} class="selected" {% endif %}> Deliverables</a>
-        <a href="{{'contact' | absolute_url}}"
-           {% if page.url contains "contact.html" %} class="selected" {% endif %}> Contact</a>
+        <div {% if page.url == '/' %} class="selected" {% endif %}>
+            <a href="{{'' | absolute_url}}">Home</a>
+        </div>
+        <div {% if page.url contains "about.html" %} class="selected" {% endif %}>
+            <a href="{{'about' | absolute_url}}">About</a>
+            <div class="drop">
+                <a href="{{'about/advisory' | absolute_url}}">Advisory Board</a>
+            </div>
+        </div>
+        <div {% if page.url contains "updates/" %} class="selected" {% endif %}>
+            <a href="{{'updates' | absolute_url}}">Updates</a>
+        </div>
+        <div {% if page.url contains "consortium.html" %} class="selected" {% endif %}>
+            <a href="{{'consortium' | absolute_url}}">Consortium</a>
+        </div>
+        <div {% if page.url contains "results/" %} class="selected" {% endif %}>
+            <a href="{{'results' | absolute_url}}">Results</a>
+            <div class="drop">
+                <a href="{{'results/publications' | absolute_url}}">Publications</a>
+                <a href="{{'results/deliverables' | absolute_url}}">Deliverables</a>
+            </div>
+        </div>
+        <div {% if page.url contains "contact.html" %} class="selected" {% endif %}>
+            <a href="{{'contact' | absolute_url}}">Contact</a>
+        </div>
     </div>
     <div class="burger">
         <label for="navigation-checkbox">
