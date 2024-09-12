@@ -1,0 +1,49 @@
+---
+layout: page
+---
+
+<!-- Section: Advisory Board -->
+<section id="advisory-board">
+    <div class="wrapper formatted-text">
+        <h1><span class="material-icons">support_agent</span>Advisory Board</h1>
+
+        <div class="content-and-side-content">
+            <div>
+                <div class="board">
+                    <div>
+                        <div>
+                            <div class="avatar">
+                                <span class="material-icons">person</span>
+                            </div>
+                            <h1>Olena Kushakovska</h1>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <div class="avatar">
+                                <span class="material-icons">person</span>
+                            </div>
+                            <h1>Geraud Krawezik</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2>Consortium Members</h2>
+                <ul class="styled-list">
+                    {% for member in site.consortium_members %}
+                    <li>
+                        <a href="{{member.url}}" target="_blank" rel="noopener">{{member.name}}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+
+                <h2>Other Links</h2>
+                <ul class="styled-list">
+                    <li><a href="https://www.khronos.org/sycl/" target="_blank" rel="noopener">Khronos SYCL</a></li>
+                    <li><a href="https://sycl.tech" target="_blank" rel="noopener">SYCL.tech</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
