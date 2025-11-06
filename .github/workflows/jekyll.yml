@@ -29,7 +29,7 @@ jobs:
       - name: Install build dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y build-essential pkg-config cmake libssl-dev
+          sudo apt-get install -y build-essential pkg-config cmake libssl-dev libffi-dev libssl-dev zlib1g-dev
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1.221.0
         with:
@@ -37,7 +37,7 @@ jobs:
           bundler-cache: false # runs 'bundle install' and caches installed gems automatically
           cache-version: 0 # Increment this number if you need to re-download cached gems
       - name: Install gems
-        run: bundle install --jobs 4 --retry 3 --verbose
+        run: bundle install --jobs 1 --retry 3 --verbose
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
