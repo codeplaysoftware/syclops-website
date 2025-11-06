@@ -29,7 +29,7 @@ jobs:
       - name: Install build dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y build-essential pkg-config cmake libssl-dev libruby-dev unzip curl     
+          sudo apt-get install -y build-essential pkg-config cmake libssl-dev ruby3.1-dev unzip curl     
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1.221.0
         with:
