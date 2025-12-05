@@ -14,12 +14,16 @@
                        target="_blank"
                        rel="noopener">Watch on YouTube.com</a>
 
-                    <!-- CloudFront video disabled due to broken URL / MIME issues -->
-                    <!--
-                    <video controls muted autoplay>
-                        <source src="https://d25jew5a8evv5b.cloudfront.net/intro.mp4" type="video/mp4; codecs='avc1.42E01E, mp4a.40.2'">
-                    </video>
-                    -->
+                    <!-- replace broken CloudFront <video> with YouTube iframe embed -->
+                    <div class="video-embed" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+                        <iframe
+                            src="https://www.youtube.com/embed/-UZDfad-4eI?rel=0&modestbranding=1&autoplay=1&mute=1"
+                            title="Intro video"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
                 </div>
             </div>
         </div>
