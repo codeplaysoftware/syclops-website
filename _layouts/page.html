@@ -8,40 +8,29 @@
 {%- endif -%}
 
 <html lang="en">
+
 <head>
     <title>{{site.title}}</title>
 
     <!-- Meta -->
     <meta charset="UTF-8">
-    <meta http-equiv="x-ua-compatible"
-          content="ie=edge"/>
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1"/>
-    <meta name="description"
-          content="{{site.description}}"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{site.description}}" />
 
     <!-- Stylesheets -->
-    <link rel="stylesheet"
-          href="{{'/static/css/styled.css' | absolute_url}}">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-          rel="stylesheet">
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+    <link rel="stylesheet" href="{{'/static/css/styled.css' | absolute_url}}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-          rel="stylesheet">
-    <link rel="icon"
-          type="image/png"
-          href="{{'favicon.png' | absolute_url}}"/>
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="{{'favicon.png' | absolute_url}}" />
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-            crossorigin="anonymous"></script>
-    <script src="{{'/static/js/jquery.cookiesaccepted.js' | absolute_url}}"
-            type="text/javascript"></script>
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="{{'/static/js/jquery.cookiesaccepted.js' | absolute_url}}" type="text/javascript"></script>
 
     <!-- Fathom -->
     <script src="https://cdn.usefathom.com/script.js" data-site="{{ site.fa }}" defer></script>
@@ -75,57 +64,57 @@
                     data:
                     https://cdn.usefathom.com;
                 frame-src
-                    'self';"
-          http-equiv="Content-Security-Policy"/>
+                    'self'
+                    https://www.youtube.com;" http-equiv="Content-Security-Policy" />
 </head>
-<body>
-{%- if header == 'expanded' -%}
-{%- include _includes/headers/expanded.html -%}
-{%- else -%}
-{%- include _includes/headers/standard.html -%}
-{%- endif -%}
-<!-- Page Content Container -->
-<div id="content">
-    {{ content }}
-</div>
 
-<!-- Footer -->
-<section id="footer">
-    <div class="wrapper">
-        <div>
-            <div class="copyright">&copy; Copyright {{ 'now' | date: "%Y" }} SYCLOPS</div>
-            <div class="attribution">
-                Codasip and the Codasip logo are registered trademarks or trademarks of Codasip Group.
-                Codeplay and the Codeplay logo are registered trademarks of Codeplay Software Ltd.
-                CERN and the CERN logo are trademarks and brand of EUROPEAN ORGANIZATION FOR NUCLEAR RESEARCH.
-            </div>
-            <div class="eu-funding">
-                <img src="{{'static/images/eu-flag.svg' | absolute_url}}" alt="EU Flag" />
-                This Horizon Europe Project "SYCLOPS" has received funding from the European Union HE Research and
-                Innovation programme under grant agreement No 101092877. Codeplay Software, as a UK participant
-                in this project is supported by UK Research and Innovation Scheme grant numbers 10048920.
-            </div>
-        </div>
-        <div>
-            <div class="socials">
-                <a href="{{site.twitter}}" target="_blank" rel="noopener">
-                    <img src="{{'static/images/socials/twitter.svg' | absolute_url}}"
-                         alt="Twitter Icon"
-                         title="Visit our Twitter" />
-                </a>
-                <a href="{{site.youtube}}" target="_blank" rel="noopener">
-                    <img src="{{'static/images/socials/youtube.svg' | absolute_url}}"
-                         alt="YouTube Icon"
-                         title="Visit our YouTube" />
-                </a>
-            </div>
-            <div class="policies">
-                <a href="{{'cookies' | absolute_url}}">Cookie Policy</a>
-                <a href="{{'privacy' | absolute_url}}">Privacy Policy</a>
-            </div>
-        </div>
+<body>
+    {%- if header == 'expanded' -%}
+    {%- include _includes/headers/expanded.html -%}
+    {%- else -%}
+    {%- include _includes/headers/standard.html -%}
+    {%- endif -%}
+    <!-- Page Content Container -->
+    <div id="content">
+        {{ content }}
     </div>
-</section>
-{%- include _includes/cookies.html -%}
+
+    <!-- Footer -->
+    <section id="footer">
+        <div class="wrapper">
+            <div>
+                <div class="copyright">&copy; Copyright {{ 'now' | date: "%Y" }} SYCLOPS</div>
+                <div class="attribution">
+                    Codasip and the Codasip logo are registered trademarks or trademarks of Codasip Group.
+                    Codeplay and the Codeplay logo are registered trademarks of Codeplay Software Ltd.
+                    CERN and the CERN logo are trademarks and brand of EUROPEAN ORGANIZATION FOR NUCLEAR RESEARCH.
+                </div>
+                <div class="eu-funding">
+                    <img src="{{'static/images/eu-flag.svg' | absolute_url}}" alt="EU Flag" />
+                    This Horizon Europe Project "SYCLOPS" has received funding from the European Union HE Research and
+                    Innovation programme under grant agreement No 101092877. Codeplay Software, as a UK participant
+                    in this project is supported by UK Research and Innovation Scheme grant numbers 10048920.
+                </div>
+            </div>
+            <div>
+                <div class="socials">
+                    <a href="{{site.twitter}}" target="_blank" rel="noopener">
+                        <img src="{{'static/images/socials/twitter.svg' | absolute_url}}" alt="Twitter Icon"
+                            title="Visit our Twitter" />
+                    </a>
+                    <a href="{{site.youtube}}" target="_blank" rel="noopener">
+                        <img src="{{'static/images/socials/youtube.svg' | absolute_url}}" alt="YouTube Icon"
+                            title="Visit our YouTube" />
+                    </a>
+                </div>
+                <div class="policies">
+                    <a href="{{'cookies' | absolute_url}}">Cookie Policy</a>
+                    <a href="{{'privacy' | absolute_url}}">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    {%- include _includes/cookies.html -%}
 </body>
+
 </html>
