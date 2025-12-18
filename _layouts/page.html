@@ -10,6 +10,17 @@
 <html lang="en">
 
 <head>
+    {% if site.ga and site.ga != "" %}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', '{{ site.ga }}');
+    </script>
+    {% endif %}
     <title>{{site.title}}</title>
 
     <!-- Meta -->
@@ -52,13 +63,16 @@
                 script-src
                     'self'
                     'unsafe-inline'
+                    'unsafe-eval'
                     https://code.jquery.com
                     https://www.googletagmanager.com
+                    https://www.google-analytics.com
                     https://cdn.usefathom.com/script.js;
                 connect-src
                     'self'
                     https://*.google-analytics.com
                     https://*.analytics.google.com
+                    https://*.googletagmanager.com
                     https://cdn.usefathom.com;
                 img-src
                     'self'
@@ -66,22 +80,12 @@
                     http:
                     data:
                     https://www.google-analytics.com
+                    https://www.googletagmanager.com
                     https://cdn.usefathom.com;
                 frame-src
                     'self'
                     https://www.youtube.com;" http-equiv="Content-Security-Policy" />
 
-    {% if site.ga and site.ga != "" %}
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga }}"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', '{{ site.ga }}');
-    </script>
-    {% endif %}
 </head>
 
 <body>
